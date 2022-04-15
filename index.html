@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>password-app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <div class="container">
+    <main class="app">
+
+      <header class="app__header">
+        <nav class="header__menu">
+          <a class="menu__item" data-link=".app__generator">Генератор</a>
+          <a class="menu__item" data-link=".app__history">История</a>
+          <a class="menu__item" data-link=".app__manager">Менеджер</a>
+        </nav>
+      </header>
+
+      <section class="app__generator">  
+        <header class="generator__header">
+          <h1 class="generator__title">Генератор паролей</h1>
+        </header>
+
+        <div class="generator__main">
+          <input type="text" class="password" disabled placeholder="Ваш пароль...">
+          <button class="generate">Создать</button>
+        </div>
+
+        <ul class="generator__settings">
+          <li class="settings__item">
+            <label for="length" class="settings__title">Длина пароля: </label>
+            <input type="number" class="length" name="length">
+          </li>
+
+          <li class="settings__item">
+            <label for="upper" class="settings__title">Использовать верхний регистр: </label>
+            <input type="checkbox" class="upper checkbox" name="upper">
+          </li>
+
+          <li class="settings__item">
+            <label for="symbols" class="settings__title">Использовать спец. символы: </label>
+            <input type="checkbox" class="symbols checkbox" name="symbols">
+          </li>
+        </ul>
+      </section> <!-- /.app__generator -->
+
+      <section class="app__history">
+        <header class="history__header">
+          <h1 class="history__title">Ваша история</h1>
+        </header>
+
+        <ul class="history__list"></ul>
+
+        <div class="history__tools">
+          <div class="slider">
+            <button class="slider__back slider__btn" title="Назад" data-section="history"></button>
+
+            <div class="slider__stats">
+              <span class="slider__current" title="Текущая страница">0</span>
+              из 
+              <span class="slider__all" title="Количество страниц">0</span>
+            </div>
+
+            <button class="slider__forward slider__btn" title="Вперед" data-section="history"></button>
+          </div>
+
+          <button class="history__clear">Очистить историю</button>
+        </div>
+      </section> <!-- /.app__history -->
+
+      <section class="app__manager">
+        <header class="manager__header">
+          <h1 class="manager__title">Менеджер</h1>
+        </header>
+
+        <ul class="manager__list"></ul>
+
+        <div class="manager__tools">
+          <div class="slider">
+            <button class="slider__back slider__btn" title="Назад" data-section="manager"></button>
+
+            <div class="slider__stats">
+              <span class="slider__current" title="Текущая страница">0</span>
+              из 
+              <span class="slider__all" title="Количество страниц">0</span>
+            </div>
+
+            <button class="slider__forward slider__btn" title="Вперед" data-section="manager"></button>
+          </div>
+
+        </div>
+      </section> <!-- /.app__manager -->
+
+      <footer class="app__footer">
+        <p class="footer__text">&#169;atomych || password-app</p>
+      </footer>
+
+    </main> <!-- /.app -->
+  </div> <!-- /.container -->
+  
+  <!-- Блок push -->
+  <div class="push">
+    <p class="push__text"></p>
+  </div>
+
+  <!-- Блок error -->
+  <div class="error">
+    <p class="error__text"></p>
+  </div>
+
+  <!-- Диалоговые окна -->
+
+  <!-- confirm -->
+  <div class="confirm">
+    <p class="confirm__text">gfdg</p>
+    <div class="confirm__btns">
+      <button class="confirm__yes">Да</button>
+      <button class="confirm__no">Нет</button>
+    </div>
+  </div>
+
+  <!-- prompt -->
+  <div class="prompt">
+    <p class="prompt__text">fdfsdfs</p>
+    <input type="text" class="prompt__input">
+    <button class="prompt__submit">Применить</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

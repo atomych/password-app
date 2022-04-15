@@ -1,0 +1,177 @@
+.app__manager {
+  display: none;
+  flex-direction: column;
+
+  width: 100%;
+
+  flex-grow: 1;
+
+  transition: .2s linear;
+}
+
+.manager__header {
+  padding: 1.5rem 0;
+}
+
+.manager__title {
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.manager__list {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.manager__item {
+  width: 100%;
+  max-width: 450px;
+
+  background-color: #fff;
+  padding: .5rem;
+
+  border-radius: .3rem;
+
+  display: flex;
+  align-items: center;
+
+  transition: .2s linear;
+
+  border: 1px solid transparent;
+
+  &:hover {
+    border-color: #000;
+  }
+
+  opacity: 0;
+
+  &.display {
+    opacity: 1 !important;
+  }
+
+  &__title {
+    transition: .3s linear;
+  }
+}
+
+.manager__password {
+  flex-grow: 1;
+
+  text-align: center;
+
+  user-select: none;
+
+  transition: .2s linear;
+}
+
+.manager__item__tools {
+  display: flex;
+  gap: 0.5rem;
+
+  align-items: center;
+}
+
+.manager__copy,
+.manager__delete,
+.manager__see,
+.manager__rename {
+  display: block;
+  width: 30px;
+  height: 30px;
+
+  background-color: #fff;
+  border: none;
+  border-radius: .3rem;
+
+  cursor: pointer;
+
+  transition: .1s linear;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 .333rem #000;
+    background-color: rgb(200, 200, 200);
+    outline: none;
+  }
+
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.manager__rename {
+  background-image: url(../images/icons/rename.png);
+
+  &:hover,
+  &:focus {
+    background-color: rgb(146, 58, 204);
+  }
+}
+
+.manager__copy {
+  background-image: url(../images/icons/copy.png);
+
+  &:hover,
+  &:focus {
+    background-color: rgb(62, 204, 58);
+  }
+}
+
+.manager__see {
+  background-image: url(../images/icons/see.png);
+
+  &:hover,
+  &:focus {
+    background-color: rgb(73, 143, 255);
+  }
+}
+
+.manager__delete {
+  background-image: url(../images/icons/delete.png);
+  
+  &:hover,
+  &:focus {
+    background-color: rgb(255, 73, 73);
+  }
+}
+
+.manager__tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: .5rem 0;
+
+  gap: 1rem;
+
+  position: relative;
+}
+
+.manager__change {
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+
+  transition: .1s linear;
+
+  position: absolute;
+
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:hover,
+  &:focus {
+    color:rgb(73, 76, 255);
+    outline: none;
+  }
+}
